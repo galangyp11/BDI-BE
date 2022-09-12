@@ -5,7 +5,7 @@ const mysql = require('mysql');
 
 const port = 3011
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`runnig on port ${port}`);
 })
 

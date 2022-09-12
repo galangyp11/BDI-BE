@@ -23,7 +23,12 @@ app.get("/", (req,res) => {
     const sqlQuery = "SELECT * FROM dongeng";
     db.query(sqlQuery, (err, rows) => {
 
-        res.json(rows)      
+        if (err) {
+            res.send("kadal geming")       
+        } else {
+            res.json(rows)
+        }
+              
     })
     
 })

@@ -3,17 +3,17 @@ const cors = require('cors');
 const app = express();
 const mysql = require('mysql');
 
-const port = 3011
+const port = 3306
 
 app.listen(process.env.PORT || port, () => {
     console.log(`runnig on port ${port}`);
 })
 
 const db = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'bdi'
+    host: 'sql6.freesqldatabase.com',
+    user: 'sql6518581',
+    password: 'lSHD6zL3pK',
+    database: 'sql6518581'
 })
 
 app.use(cors());    

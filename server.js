@@ -10,10 +10,10 @@ app.listen(process.env.PORT || port, () => {
 })
 
 const db = mysql.createPool({
-    host: 'sql6.freesqldatabase.com',
-    user: 'sql6518581',
-    password: 'lSHD6zL3pK',
-    database: 'sql6518581'
+    host: 'sql12.freesqldatabase.com',
+    user: 'sql12599621',
+    password: 'Ec5h9kbcC2',
+    database: 'sql12599621'
 })
 
 app.use(cors());    
@@ -24,7 +24,7 @@ app.get("/", (req,res) => {
     db.query(sqlQuery, (err, rows) => {
 
         if (err) {
-            res.send("kadal geming")       
+            res.send("ERROR DATABASE")       
         } else {
             res.json(rows)
         }
@@ -38,6 +38,7 @@ app.get("/:id", (req,res) => {
     
     const sqlQuery = `SELECT * FROM dongeng where id_dongeng = ${id}`;
     db.query(sqlQuery, (err, rows) => {
+        
         try{
             res.json(rows[0])     
         } catch (error) {

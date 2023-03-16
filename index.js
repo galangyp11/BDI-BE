@@ -11,9 +11,9 @@ app.listen(process.env.PORT || port, () => {
 
 const db = mysql.createPool({
     host: 'sql12.freesqldatabase.com',
-    user: 'sql12602192',
-    password: 'jYK1U9bs1G',
-    database: 'sql12602192'
+    user: 'sql12606177',
+    password: 'ZSKzyHtqtt',
+    database: 'sql12606177'
 })
 
 app.use(cors());    
